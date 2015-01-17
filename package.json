@@ -1,5 +1,5 @@
 {
-  "name": "accent-clean",
+  "name": "delatinise-cli",
   "version": "0.1.0",
   "description": "A CLI tool to remove accents from text files.",
   "main": "index.js",
@@ -8,6 +8,8 @@
   },
   "keywords": [
     "cli",
+		"command line",
+		"console",
     "accent",
     "string"
   ],
