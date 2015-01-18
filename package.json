@@ -8,8 +8,8 @@
   },
   "keywords": [
     "cli",
-		"command line",
-		"console",
+    "command line",
+    "console",
     "accent",
     "string"
   ],
@@ -18,7 +18,9 @@
   "dependencies": {
     "async": "^0.9.0",
     "commander": "^2.6.0",
+    "iconv-lite": "^0.4.6",
     "mmmagic": "^0.3.12",
+    "mv": "^2.0.3",
     "string": "^3.0.0"
   }
 }
