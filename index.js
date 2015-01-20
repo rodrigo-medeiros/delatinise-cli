@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var util = require('./lib/util'),
+var helpers = require('./lib/helpers'),
 		S = require('string'),
 		program = require('commander'),
 		async = require('async'),
@@ -17,9 +17,13 @@ program
 	.option('-e, --encoding [type]', "The desired encoding output [utf8].", 'utf8')
 	.parse(process.argv);
 
-var filePaths = program.args.length ? program.args : [ './' ];
+var options = {
+  delete: program.delete,
+  encoding: program.encoding,
+  filePath: program.args.length ? program.args[0] : './'
+};
 
-async.each(filePaths, util.processFiles, function (error) {
+helpers.delatinise(options, function (error) {
   if (error) console.log(error);
   else console.log("All files have been successfully processed.");
 });
