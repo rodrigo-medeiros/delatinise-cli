@@ -1,13 +1,6 @@
 #!/usr/bin/env node
-
 var helpers = require('./lib/helpers'),
-		S = require('string'),
-		program = require('commander'),
-		async = require('async'),
-		iconv = require('iconv-lite'),
-		mmm = require('mmmagic'),
-		Magic = mmm.Magic;
-
+		program = require('commander');
 
 program
 	.version('0.1.0')
