@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var Delatinise = require('./lib/helpers'),
+var Delatinise = require('./lib/delatinise'),
 		program = require('commander');
 
 program

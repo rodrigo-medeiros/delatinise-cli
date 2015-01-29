@@ -1,4 +1,4 @@
-var Delatinise = require('../lib/helpers'),
+var Delatinise = require('../lib/delatinise'),
     expect = require('expect.js');
 
 describe("validatePath:", function () {
