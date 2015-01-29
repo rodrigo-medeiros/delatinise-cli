@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var helpers = require('./lib/helpers'),
+var Delatinise = require('./lib/helpers'),
 		program = require('commander');
 
 program
@@ -16,7 +16,9 @@ var options = {
   filePath: program.args.length ? program.args[0] : './'
 };
 
-helpers.delatinise(options, function (error) {
+var delatinise = new Delatinise(options);
+
+delatinise.run(function (error) {
   if (error) console.log(error);
   else console.log("All files have been successfully processed.");
 });
