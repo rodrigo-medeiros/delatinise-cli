@@ -13,7 +13,7 @@ program
 var options = {
   delete: program.delete,
   encoding: program.encoding,
-  filePath: program.args.length ? program.args[0] : './'
+  filePath: program.args[0]
 };
 
 var delatinise = new Delatinise(options);

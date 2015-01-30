@@ -33,4 +33,19 @@ describe("validatePath:", function () {
 
   });
 
+  describe("When no path is passed", function () {
+
+    it("should return true", function (done) {
+      var options = {
+        filePath: ""
+      };
+      var delatinise = new Delatinise(options);
+      delatinise.validatePath(function (isValid) {
+        expect(isValid).to.be(true);
+        done();
+      });
+    });
+
+  });
+
 });
