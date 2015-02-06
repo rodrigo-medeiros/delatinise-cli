@@ -31,7 +31,7 @@ describe("CLI", function () {
 
       exec("node index.js ./foo/bar/invalid-file.txt", function (error, stdout, stderr) {
         if (error) return done(error);
-        expect(stdout).to.equal("An error has ocurred: Directory/file ./foo/bar/invalid-file.txt doesn't exist.\n");
+        expect(stdout).to.equal("Directory/file ./foo/bar/invalid-file.txt doesn't exist.\n");
         done();
       });
 
