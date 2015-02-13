@@ -20,9 +20,7 @@
     "commander": "^2.6.0",
     "encoding": "^0.1.11",
     "iconv": "^2.1.5",
-    "iconv-lite": "^0.4.6",
     "mmmagic": "^0.3.12",
-    "mv": "^2.0.3",
     "string": "^3.0.0"
   },
   "devDependencies": {
