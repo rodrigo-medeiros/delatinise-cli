@@ -15,7 +15,7 @@ describe("CLI", function () {
 
     it("should process the file and return a confirmation message", function (done) {
 
-      exec("node index.js ./test/with-latin-chars.txt", function (error, stdout, stderr) {
+      exec("delatinise ./test/with-latin-chars.txt", function (error, stdout, stderr) {
         if (error) return done(error);
         expect(stdout).to.equal("All files have been successfully processed.\n");
         done();
@@ -29,7 +29,7 @@ describe("CLI", function () {
 
     it("should not process the file and return an error message", function (done) {
 
-      exec("node index.js ./foo/bar/invalid-file.txt", function (error, stdout, stderr) {
+      exec("delatinise ./foo/bar/invalid-file.txt", function (error, stdout, stderr) {
         if (error) return done(error);
         expect(stdout).to.equal("Directory/file ./foo/bar/invalid-file.txt doesn't exist.\n");
         done();
