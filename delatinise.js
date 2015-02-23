@@ -5,13 +5,10 @@ var Delatinise = require('./lib/delatinise'),
 program
 	.version('0.1.0')
 	.description("A CLI tool to remove accents from text files.")
-	.usage('[options] <path>')
-	.option('-e, --encoding [type]', "The desired encoding output [utf8].", 'utf8')
+	.usage('<path>')
 	.parse(process.argv);
 
 var options = {
-  delete: program.delete,
-  encoding: program.encoding,
   filePath: program.args[0]
 };
 
