@@ -2,13 +2,13 @@
   "name": "delatinise-cli",
   "version": "0.1.0",
   "description": "A CLI tool to remove accents from text files.",
-  "main": "delatinise.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha test/"
   },
   "preferGlobal": "true",
   "bin": {
-    "delatinise": "delatinise.js"
+    "delatinise": "index.js"
   },
   "keywords": [
     "cli",

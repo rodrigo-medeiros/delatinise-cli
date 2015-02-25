@@ -4,7 +4,7 @@ var Delatinise = require('./lib/delatinise'),
 
 program
 	.version('0.1.0')
-	.description("A CLI tool to remove accents from text files.")
+	.description("A CLI tool to remove accents from text files.\n  If no path is specified, the tool is going to look for text files in the current directory.")
 	.usage('<path>')
 	.parse(process.argv);
 
