@@ -57,7 +57,7 @@ function copyFiles (done) {
 }
 
 function removeFilesAndDir (done) {
-  exec("rm -rf ./test/backup; rm -f ./test/with-latin-chars.txt", function (error, stdout, sdterr) {
+  exec("rm -rf ./test/backup; rm -f ./test/*.txt", function (error, stdout, sdterr) {
     if (error) return done(error);
     done();
   });
