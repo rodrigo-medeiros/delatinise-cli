@@ -1,5 +1,4 @@
-var Delatinise = require('../lib/delatinise'),
-    expect = require('expect.js'),
+var expect = require('expect.js'),
     exec = require('child_process').exec;
 
 describe("CLI", function () {
