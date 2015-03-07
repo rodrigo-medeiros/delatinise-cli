@@ -41,7 +41,12 @@ describe("CLI", function () {
   describe("When no path is passed", function () {
 
     it("should process all .txt files inside current dir and return a confirmation message", function (done) {
-      done();
+
+      exec("delatinise", function (error, stdout, stderr) {
+        if (error) return done(error);
+        expect(stdout).to.equal("All files have been successfully processed.\n");
+        done();
+      });
     });
 
   });
