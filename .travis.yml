@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '0.12'
+before_script:
+- npm link
+deploy:
+  provider: npm
+  email: rodrigo.mangue@gmail.com
+  api_key:
+    secure: aQpiQymI+EKvY5A1pvPOwFgv/2fjtMIfPzVd+XCi38z2Sg0Lo37a86GwWdVt0bm8AZ6Rvf1U0HGCFEOTB2X4SyayrCdu12T68TtJcLON7EYhq9JWxQUkfi6C57DlKxr+NsMcQYudux13wl2OxtJp2608DsTShpd3yABn9LH9FHs=
+  on:
+    tags: true
+    repo: rodrigo-medeiros/delatinise-cli
