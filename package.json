@@ -1,6 +1,6 @@
 {
   "name": "delatinise-cli",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A CLI tool to remove accents from text files.",
   "author": "Rodrigo Medeiros <rodrigo.mangue@gmail.com> (https://coderbits.com/rodrigomangue)",
   "repository": "rodrigo-medeiros/delatinise-cli",

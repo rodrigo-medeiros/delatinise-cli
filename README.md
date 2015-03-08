@@ -1,4 +1,5 @@
 # delatinise-cli
+[![Build Status](https://travis-ci.org/rodrigo-medeiros/delatinise-cli.svg?branch=0.1.2)](https://travis-ci.org/rodrigo-medeiros/delatinise-cli)
 > A CLI tool to remove accents from text files.
 
 Install this globally and you'll have access to this tool anywhere on your system.
