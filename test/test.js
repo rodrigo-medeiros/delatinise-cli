@@ -40,11 +40,11 @@ describe("CLI", function () {
 
   describe("When no path is passed", function () {
 
-    it("should process all .txt files inside current dir and return a confirmation message", function (done) {
+    it("should return the help information", function (done) {
 
       exec("delatinise", function (error, stdout, stderr) {
         if (error) return done(error);
-        expect(stdout).to.equal("All files have been successfully processed.\n");
+        expect(stdout).to.equal("\n  Usage: delatinise <path>\n\n  A CLI tool to remove accents from text files.\n\n  Options:\n\n    -h, --help     output usage information\n    -V, --version  output the version number\n\n");
         done();
       });
     });
