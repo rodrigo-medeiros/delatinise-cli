@@ -19,7 +19,9 @@ if (!options.filePath) {
 
 var delatinise = new Delatinise(options);
 
-delatinise.run(function (error) {
-  if (error) process.stdout.write(error + "\n");
-  else process.stdout.write("All files have been successfully processed.\n");
-});
+setTimeout(function () {
+  delatinise.run(function (error) {
+    if (error) process.stdout.write(error + "\n");
+    else process.stdout.write("All files have been successfully processed.\n");
+  });
+}, 1000);
