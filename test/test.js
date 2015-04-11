@@ -16,7 +16,7 @@ describe("CLI", function () {
 
       exec("delatinise ./test/with-latin-chars.txt", function (error, stdout, stderr) {
         if (error) return done(error);
-        expect(stdout).to.equal("All files have been successfully processed.\n");
+        expect(stdout).to.equal("Converting file ./test/with-latin-chars.txt: done!\nAll files have been successfully processed.\n");
         done();
       });
 
