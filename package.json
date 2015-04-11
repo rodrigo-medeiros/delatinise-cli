@@ -5,7 +5,7 @@
   "author": "Rodrigo Medeiros <rodrigo.mangue@gmail.com> (https://coderbits.com/rodrigomangue)",
   "repository": "rodrigo-medeiros/delatinise-cli",
   "engines": {
-    "node" : ">=0.12.0"
+    "node": ">=0.12.0"
   },
   "licenses": [
     {
@@ -32,7 +32,6 @@
   "dependencies": {
     "async": "^0.9.0",
     "commander": "^2.6.0",
-    "mmmagic": "^0.3.13",
     "string": "^3.0.0"
   },
   "devDependencies": {
