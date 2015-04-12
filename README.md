@@ -16,3 +16,7 @@ delatinise <path>
 The path can be a file or directory.
 
 **Note:** this tool uses the [string.js](http://stringjs.com) [`latinise()`](http://stringjs.com/#methods/latinise) method to execute the accent removal task.
+
+## License
+
+Licensed under the [MIT License](https://github.com/rodrigo-medeiros/delatinise-cli/blob/master/LICENSE)
