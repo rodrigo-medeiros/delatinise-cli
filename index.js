@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 var Delatinise = require('./lib/delatinise'),
     program = require('commander'),
+    path = require('path'),
     version = require('./package.json').version;
 
 program
@@ -10,10 +11,10 @@ program
   .parse(process.argv);
 
 var options = {
-  filePath: program.args[0]
+  path: program.args[0]
 };
 
-if (!options.filePath) {
+if (!options.path) {
   return program.help();
 }
 

@@ -1,4 +1,5 @@
 var expect = require('expect.js'),
+    path = require('path'),
     exec = require('child_process').exec;
 
 describe("CLI", function () {
@@ -14,9 +15,10 @@ describe("CLI", function () {
 
     it("should process the file and return a confirmation message", function (done) {
 
-      exec("delatinise ./test/with-latin-chars.txt", function (error, stdout, stderr) {
+      console.log(__dirname);
+      exec("delatinise " + path.join(__dirname, "with-latin-chars.txt"), function (error, stdout, stderr) {
         if (error) return done(error);
-        expect(stdout).to.equal("Converting file ./test/with-latin-chars.txt: done!\nAll files have been successfully processed.\n");
+        expect(stdout).to.equal("Converting file " + path.join(__dirname, "with-latin-chars.txt") + ": done!\nAll files have been successfully processed.\n");
         done();
       });
 
@@ -61,7 +63,7 @@ function copyFiles (done) {
 }
 
 function removeFilesAndDir (done) {
-  exec("rm -rf ./test/*.txt; rm -f .*_NEW*; rm -f *_NEW*;", function (error, stdout, sdterr) {
+  exec("rm -rf ./test/*.txt;", function (error, stdout, sdterr) {
     if (error) return done(error);
     done();
   });
