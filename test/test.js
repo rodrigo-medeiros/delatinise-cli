@@ -63,7 +63,7 @@ function copyFiles (done) {
 }
 
 function removeFilesAndDir (done) {
-  exec("rm -rf ./test/*.txt;", function (error, stdout, sdterr) {
+  exec("rm -rf ./test/*.txt; rm -rf ./test/delatinised", function (error, stdout, sdterr) {
     if (error) return done(error);
     done();
   });
