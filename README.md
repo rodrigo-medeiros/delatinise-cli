@@ -13,9 +13,13 @@ To run it:
 delatinise <path>
 ```
 
-The path can be a file or directory.
+The path can be a file or directory. It will create a folder called __delatinised__ and put all processed files in it.
 
-**Note:** this tool uses the [string.js](http://stringjs.com) [`latinise()`](http://stringjs.com/#methods/latinise) method to execute the accent removal task.
+## Encoding
+
+`delatinise-cli` tries to figure out the encoding of the files you want to treat. By default, it converts them to **UTF-8**, since after the conversion, we don't have accents any more.
+
+**Note:** To execute the accent removal task, we use the [string.js](http://stringjs.com) [`latinise()`](http://stringjs.com/#methods/latinise) method.
 
 ## License
 
