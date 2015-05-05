@@ -11,17 +11,21 @@ program
   .parse(process.argv);
 
 var options = {
+
   path: program.args[0]
 };
 
 if (!options.path) {
+
   return program.help();
 }
 
 var delatinise = new Delatinise(options);
 
 setTimeout(function () {
+
   delatinise.run(function (error) {
+
     if (error) process.stdout.write(error + "\n");
     else process.stdout.write("All files have been successfully processed.\n");
   });
