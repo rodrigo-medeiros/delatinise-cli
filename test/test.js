@@ -15,7 +15,6 @@ describe("CLI", function () {
 
     it("should process the file and return a confirmation message", function (done) {
 
-      console.log(__dirname);
       exec("delatinise " + path.join(__dirname, "with-latin-chars.txt"), function (error, stdout, stderr) {
         if (error) return done(error);
         expect(stdout).to.equal("Converting file " + path.join(__dirname, "with-latin-chars.txt") + ": done!\nAll files have been successfully processed.\n");
@@ -25,6 +24,21 @@ describe("CLI", function () {
     });
 
   });
+
+  describe("When a valid directory is passed", function () {
+
+    it("should process the file and return a confirmation message", function (done) {
+
+      exec("delatinise " + __dirname, function (error, stdout, stderr) {
+        if (error) return done(error);
+        expect(stdout).to.equal("Converting file " + path.join(__dirname, "with-latin-chars.txt") + ": done!\nConverting file " + path.join(__dirname, "test.js") + ": done!\nAll files have been successfully processed.\n");
+        done();
+      });
+
+    });
+
+  });
+
 
   describe("When an invalid file is passed", function () {
 
