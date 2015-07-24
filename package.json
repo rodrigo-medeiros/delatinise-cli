@@ -30,14 +30,14 @@
     "string"
   ],
   "dependencies": {
-    "async": "^0.9.0",
+    "async": "^1.4.0",
     "commander": "^2.6.0",
     "iconv-lite": "^0.4.8",
     "mmmagic": "^0.3.13",
     "string": "^3.0.0"
   },
   "devDependencies": {
-    "mocha": "^1.21.4",
-    "expect.js": "^0.3.1"
+    "expect.js": "^0.3.1",
+    "mocha": "^2.2.5"
   }
 }
