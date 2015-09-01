@@ -27,4 +27,4 @@ The conversion process, by its nature, is susceptible to race conditions. So it 
 
 ## License
 
-Licensed under the [MIT License](https://github.com/rodrigo-medeiros/delatinise-cli/blob/master/LICENSE)
+Licensed under the [MIT license](http://opensource.org/licenses/MIT)
