@@ -17,16 +17,21 @@ var options = {
 
 if (!options.path) {
 
-  return program.help();
+  program.help();
+} else {
+
+  var delatinise = new Delatinise(options);
+
+  setTimeout(function () {
+
+    delatinise.run(function (error) {
+
+      if (error) {
+        process.stdout.write(error + "\n");
+      } else {
+        process.stdout.write("All files have been successfully processed.\n");
+      }
+    });
+  }, 1000);
 }
 
-var delatinise = new Delatinise(options);
-
-setTimeout(function () {
-
-  delatinise.run(function (error) {
-
-    if (error) process.stdout.write(error + "\n");
-    else process.stdout.write("All files have been successfully processed.\n");
-  });
-}, 1000);
