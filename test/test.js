@@ -1,9 +1,11 @@
-var expect = require('expect.js'),
-    path = require('path'),
-    exec = require('child_process').exec;
+"use strict";
+
+var expect = require("expect.js"),
+    path = require("path"),
+    exec = require("child_process").exec;
 
 function copyFiles (done) {
-  exec("cp ./test/files/with-latin-chars.txt ./test/;", function (error, stdout, sdterr) {
+  exec("cp ./test/files/with-latin-chars.txt ./test/;", function (error) {
     if (error) {
       return done(error);
     }
@@ -12,7 +14,7 @@ function copyFiles (done) {
 }
 
 function removeFilesAndDir (done) {
-  exec("rm -rf ./test/*.txt; rm -rf ./test/delatinised", function (error, stdout, sdterr) {
+  exec("rm -rf ./test/*.txt; rm -rf ./test/delatinised", function (error) {
     if (error) {
       return done(error);
     }
@@ -33,7 +35,7 @@ describe("CLI", function () {
 
     it("should process the file and return a confirmation message", function (done) {
 
-      exec("delatinise " + path.join(__dirname, "with-latin-chars.txt"), function (error, stdout, stderr) {
+      exec("delatinise " + path.join(__dirname, "with-latin-chars.txt"), function (error, stdout) {
         if (error) {
           return done(error);
         }
@@ -49,7 +51,7 @@ describe("CLI", function () {
 
     it("should process the file and return a confirmation message", function (done) {
 
-      exec("delatinise " + path.join(__dirname), function (error, stdout, stderr) {
+      exec("delatinise " + path.join(__dirname), function (error, stdout) {
         if (error) {
           return done(error);
         }
@@ -66,7 +68,7 @@ describe("CLI", function () {
 
     it("should not process the file and return an error message", function (done) {
 
-      exec("delatinise ./foo/bar/invalid-file.txt", function (error, stdout, stderr) {
+      exec("delatinise ./foo/bar/invalid-file.txt", function (error, stdout) {
         if (error) {
           return done(error);
         }
@@ -82,7 +84,7 @@ describe("CLI", function () {
 
     it("should return the help information", function (done) {
 
-      exec("delatinise", function (error, stdout, stderr) {
+      exec("delatinise", function (error, stdout) {
         if (error) {
           return done(error);
         }
