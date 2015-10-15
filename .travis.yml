@@ -1,13 +1,24 @@
+sudo: false
 language: node_js
+cache:
+  directories:
+    - node_modules
+notifications:
+  email: false
 node_js:
-- '0.12'
+  - iojs-v3
+  - iojs-v2
+  - iojs-v1
+  - '0.12'
+  - '0.10'
+before_install:
+  - npm i -g npm@^2.0.0
 before_script:
-- npm link
-deploy:
-  provider: npm
-  email: rodrigo.mangue@gmail.com
-  api_key:
-    secure: aQpiQymI+EKvY5A1pvPOwFgv/2fjtMIfPzVd+XCi38z2Sg0Lo37a86GwWdVt0bm8AZ6Rvf1U0HGCFEOTB2X4SyayrCdu12T68TtJcLON7EYhq9JWxQUkfi6C57DlKxr+NsMcQYudux13wl2OxtJp2608DsTShpd3yABn9LH9FHs=
-  on:
-    tags: true
-    repo: rodrigo-medeiros/delatinise-cli
+  - npm prune
+  - 'curl -Lo travis_after_all.py https://git.io/vLSON'
+script:
+  - npm run test
+after_success:
+  - python travis_after_all.py
+  - export $(cat .to_export_back)
+  - npm run semantic-release

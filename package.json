@@ -1,22 +1,27 @@
 {
   "name": "delatinise-cli",
-  "version": "0.1.16",
+  "version": "0.0.0-semantically-released",
   "description": "A CLI tool to remove accents from text files.",
   "author": "Rodrigo Medeiros <rodrigo.mangue@gmail.com> (https://coderbits.com/rodrigomangue)",
-  "repository": "rodrigo-medeiros/delatinise-cli",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rodrigo-medeiros/delatinise-cli.git"
+  },
   "engines": {
     "node": ">=0.12.0"
   },
-	"eslintConfig": {
-		"env": {
-			"node": true,
-			"mocha": true
-		}
-	},
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "mocha": true
+    }
+  },
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test": "npm link; mocha test/"
+		"commit": "git-cz",
+    "test": "npm link; mocha test/",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "preferGlobal": "true",
   "bin": {
@@ -38,7 +43,13 @@
     "string": "^3.0.0"
   },
   "devDependencies": {
+    "commitizen": "1.0.5",
+    "cz-conventional-changelog": "1.1.2",
     "expect.js": "^0.3.1",
-    "mocha": "^2.2.5"
-  }
+    "mocha": "^2.2.5",
+    "semantic-release": "^4.3.5"
+  },
+	"czConfig": {
+		"path": "node_modules/cz-conventional-changelog"
+	}
 }
