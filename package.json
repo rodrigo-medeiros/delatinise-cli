@@ -19,7 +19,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-		"commit": "git-cz",
+    "commit": "git-cz",
     "test": "npm link; mocha test/test.js -w",
     "test:single": "npm link; mocha test/test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -37,20 +37,21 @@
     "string"
   ],
   "dependencies": {
-    "async": "^1.4.0",
+    "async": "2.0.0-rc.6",
     "commander": "^2.6.0",
     "iconv-lite": "^0.4.8",
-    "mmmagic": "^0.3.13",
+    "mmmagic": "0.4.4",
     "string": "^3.0.0"
   },
   "devDependencies": {
-    "commitizen": "1.0.5",
-    "cz-conventional-changelog": "1.1.2",
+    "commitizen": "2.8.2",
+    "cz-conventional-changelog": "1.1.6",
     "expect.js": "^0.3.1",
+    "mmmagic": "0.4.4",
     "mocha": "^2.2.5",
     "semantic-release": "^4.3.5"
   },
-	"czConfig": {
-		"path": "node_modules/cz-conventional-changelog"
-	}
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  }
 }
